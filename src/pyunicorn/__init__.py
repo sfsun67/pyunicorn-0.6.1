@@ -1,5 +1,8 @@
-# This file is part of pyunicorn.
-# Copyright (C) 2008--2022 Jonathan F. Donges and pyunicorn authors
+# This file is part of pyunicorn
+# (Unified Complex Network and Recurrence Analysis Toolbox).
+#
+# Copyright (C) 2008--2019 Jonathan F. Donges and pyunicorn authors
+#
 # URL: <http://www.pik-potsdam.de/members/donges/software>
 # License: BSD (3-clause)
 #
@@ -34,7 +37,20 @@ To Do
    - Clean up MapPlots class -> Alex!?
 
 """
+import os
+import sys
 
-from .version import __version__
+#from setup import __version__   #直接隐藏这段代码，测试文件《recurrence_network》正常运行
+
 from .utils import mpi
 from .core import *
+
+sys.path.insert(0, os.path.abspath('../..'))
+
+
+__author__ = "Jonathan F. Donges <donges@pik-potsdam.de>"
+__copyright__ = \
+    "Copyright (C) 2008-2019 Jonathan F. Donges and pyunicorn authors"
+__license__ = "BSD (3-clause)"
+__url__ = "http://www.pik-potsdam.de/members/donges/software"
+__docformat__ = "restructuredtext en"
